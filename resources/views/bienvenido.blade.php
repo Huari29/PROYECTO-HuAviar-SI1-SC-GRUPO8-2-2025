@@ -36,7 +36,7 @@
             </li>
             <li style="border-bottom:1px solid #eee;">
                 <a href="" style="display:block; padding:10px; text-decoration:none; color:#333;">ver usuarios</a>
-            <h1>cambio de prueba</h1>
+            
             </li>
             <li>
                 <form method="POST" action="{{ route('cerrarSesion') }}">
