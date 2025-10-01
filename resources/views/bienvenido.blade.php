@@ -1,14 +1,68 @@
 @extends('plantillas.inicio')
 
-<header>
-    @section('h1', 'Catálogo de Aves')
-    @section('botones')
+
+@section('h1', 'Catálogo de Aves')
+
+@section('botonesSesionCerrada')
     <div class="header-buttons">
         <a href="{{route('acceso')}}">Iniciar Sesión</a>
         <a href="{{route('registro')}}">Registrarse</a>
     </div>
-    @endsection
-</header>
+@endsection
+
+@section('botonesSesionAbierta')
+    <div style="position:relative; display:inline-block;">
+        <button id="userMenuBtn" style="color:#ef8504; background:white; padding:8px 15px; border-radius:5px; font-weight:bold; border:none; cursor:pointer;">
+            @Auth
+                {{ Auth::user()->nombre ?? Auth::user()->email }} ▼
+            @endAuth
+        </button>
+
+        <ul id="userMenu" style="
+            display:none;
+            position:absolute;
+            right:0;
+            background:white;
+            color:#333;
+            list-style:none;
+            padding:0;
+            margin:0;
+            border-radius:5px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            min-width:150px;
+            z-index:1000;">
+            <li style="border-bottom:1px solid #eee;">
+                <a href="{{ route('perfil') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">Perfil</a>
+            </li>
+            <li style="border-bottom:1px solid #eee;">
+                <a href="{{ route('usuarios') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">ver usuarios</a>
+            </li>
+            <li>
+                <form method="POST" action="{{ route('cerrarSesion') }}">
+                @csrf
+                    <button type="submit" style="width:100%; text-align:left; padding:10px; border:none; background:none; cursor:pointer; color:#333;">Cerrar Sesión</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const boton = document.getElementById('userMenuBtn');
+            const menu = document.getElementById('userMenu');
+
+            boton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', function() {
+                menu.style.display = 'none';
+            });
+        });
+    </script>
+@endsection
+
 @section('content')
 <div class="container">
 
