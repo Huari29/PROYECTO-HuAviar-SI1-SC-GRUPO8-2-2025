@@ -38,3 +38,4 @@ Route::post('/reset-password', [RestablecerContraseniaControlador::class, 'guard
     ->name('actualizar.contrasenia');
 
 Route::get('/perfil', [PerfilControlador::class, 'verDatos'])->name('perfil')->middleware('auth');
+Route::get('/perfil', [Controlador::class, 'verDatos'])->name('usuarios')->middleware('auth');
