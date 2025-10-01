@@ -35,7 +35,8 @@
                 <a href="{{ route('perfil') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">Perfil</a>
             </li>
             <li style="border-bottom:1px solid #eee;">
-                <a href="{{ route('usuarios') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">ver usuarios</a>
+                <a href="" style="display:block; padding:10px; text-decoration:none; color:#333;">ver usuarios</a>
+            <!-- {{ route('usuarios') }}-->
             </li>
             <li>
                 <form method="POST" action="{{ route('cerrarSesion') }}">
