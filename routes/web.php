@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/datos-personales', [UsuarioControlador::class, 'mostrarDatosPersonales'])->name('mostrarDatosPersonales');
     Route::get('/lista-de-usuarios', [UsuarioControlador::class, 'mostrarDatosDeTodosLosUsuarios'])->name('mostrarDatosDeTodosLosUsuarios');
     Route::post('/usuarios', [UsuarioControlador::class, 'guardar'])->name('guardar.usuarios');
-    Route::get('/usuarios/{id}/editar', [UsuarioControlador::class, 'editar'])->name('editar.usuario');
-    Route::put('/usuarios/{id}', [UsuarioControlador::class, 'actualizar'])->name('actualizar.usuario');
-    Route::delete('/usuarios/{id}', [UsuarioControlador::class, 'eliminar'])->name('eliminar.usuario');
+    Route::get('/usuarios/{id}/editar', [UsuarioControlador::class, 'editarUsuario'])->name('editar.usuario');
+    Route::put('/usuarios/{id}', [UsuarioControlador::class, 'actualizarUsuario'])->name('actualizarUsuario');
+    Route::delete('/usuarios/{id}', [UsuarioControlador::class, 'eliminarUsuario'])->name('eliminar.usuario');
 });
