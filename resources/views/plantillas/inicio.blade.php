@@ -100,6 +100,21 @@
         font-size: 0.95em;
         color: #666;
         }
+        .textarea-controlado {
+    width: 100%;                /* Ocupa todo el ancho del contenedor del formulario */
+    max-width: 100%;            /* Evita que sobresalga */
+    height: 150px;              /* Altura cómoda */
+    min-height: 100px;          /* Altura mínima */
+    padding: 12px;              /* Espacio interno */
+    margin-top: 10px;           /* Espacio arriba */
+    margin-bottom: 20px;        /* Espacio abajo */
+    border: 1px solid #ccc;     /* Borde suave */
+    border-radius: 5px;         /* Bordes redondeados */
+    resize: vertical;           /* Permite cambiar altura */
+    font-size: 1em;             /* Tamaño de texto legible */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;     /* Incluye padding dentro del ancho */
+}
 
     /* Formularios */
     .form-box {
@@ -251,6 +266,11 @@
     display: flex;
     gap: 10px; /* espacio entre los botones */
 }
+.div-botones2{
+    display: flex;
+    gap: 10px; /* espacio entre los botones */
+    margin-top: 20px; /* separación hacia abajo */
+}
     /* Estilo para eliminar */
 .btn-eliminar {
     color: red;                 /* letra roja */
@@ -263,7 +283,9 @@
     border: none;
     cursor: pointer;
 }
-
+.volver-btn {
+    margin-top: 50px; /* separa el botón hacia abajo */
+}
 .btn-eliminar:hover {
     background: red;            /* fondo rojo */
     color: white;               /* letra blanca */

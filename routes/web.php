@@ -7,6 +7,7 @@ use App\Http\Controladores\Autenticacion\OlvideMiContraseniaControlador;
 use App\Http\Controladores\Autenticacion\RestablecerContraseniaControlador;
 use App\Http\Controladores\Autenticacion\PerfilControlador;
 use App\Http\Controladores\UsuarioControlador;
+use App\Http\Controladores\CategoriaControlador;
 
 Route::get('/', function () {
     return view('bienvenido');
@@ -54,3 +55,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/usuarios/crear', [UsuarioControlador::class, 'crearNuevoUsuario'])->name('crearNuevoUsuario');
 });
+
+
+
+Route::resource('categorias', CategoriaControlador::class)->middleware('auth');
