@@ -50,4 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/usuarios/{id}/editar', [UsuarioControlador::class, 'editarUsuario'])->name('editar.usuario');
     Route::put('/usuarios/{id}', [UsuarioControlador::class, 'actualizarUsuario'])->name('actualizarUsuario');
     Route::delete('/usuarios/{id}', [UsuarioControlador::class, 'eliminarUsuario'])->name('eliminar.usuario');
+    Route::get('/formulario', [UsuarioControlador::class, 'formularioParaCrearNuevoUsuario'])->name('formularioParaCrearNuevoUsuario');
+
+    Route::post('/usuarios/crear', [UsuarioControlador::class, 'crearNuevoUsuario'])->name('crearNuevoUsuario');
 });

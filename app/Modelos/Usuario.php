@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
+use App\Modelos\Vendedor;
+use App\Modelos\Rol;
 
 class Usuario extends Authenticatable
 {
@@ -34,6 +36,21 @@ class Usuario extends Authenticatable
         return [
             'created_at' => 'datetime',
         ];
+    }
+    // 🔹 Relación con Cliente
+    public function cliente()
+    {
+        return $this->belongsTo(Cliente::class, 'idclientes');
+    }
+
+    // 🔹 Relación con Vendedor
+    public function vendedor()
+    {
+        return $this->belongsTo(Vendedor::class, 'idvendedors');
+    }
+    public function rol()
+    {
+        return $this->belongsTo(Rol::class, 'idrols');
     }
 
     /**

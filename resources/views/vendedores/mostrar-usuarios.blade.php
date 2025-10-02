@@ -62,17 +62,10 @@
     </div>
 
     {{-- Botón para crear usuario --}}
-    <div style="margin-top: 20px; text-align: right;">
-        <a href="" class="header-buttons">Crear Usuario</a>
+    <div class="form-group" style="display:flex; gap:10px;">
+        <a href="{{ route('formularioParaCrearNuevoUsuario') }}" class="header-buttons">Crear Usuario</a>
+        <a href="{{ route('bienvenido.usuarios.vendedor') }}" class="btn btn-cerrar">Volver</a>
     </div>
-    <div style="margin-top: 20px; text-align: right;">
-        <form action="{{ route('cerrarSesion') }}" method="POST" style="display:inline;">
-        @csrf
-            <button type="submit" class="header-buttons btn-cerrar">
-                Cerrar Sesión
-            </button>
-        </form>
-</div>
 
 </div>
 @endsection
