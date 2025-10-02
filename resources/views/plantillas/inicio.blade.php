@@ -175,7 +175,7 @@
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px #f76104ed;
     }
 
     .styled-table thead tr {
@@ -247,7 +247,45 @@
     background: #ff4c4c; /* rojo suave */
     color: white;
     }
+.div-botones {
+    display: flex;
+    gap: 10px; /* espacio entre los botones */
+}
+    /* Estilo para eliminar */
+.btn-eliminar {
+    color: red;                 /* letra roja */
+    background: #f9f9f9;        /* gris muy claro */
+    padding: 3px 9px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
 
+.btn-eliminar:hover {
+    background: red;            /* fondo rojo */
+    color: white;               /* letra blanca */
+}
+
+/* Estilo para editar */
+.btn-editar {
+    color: blue;                /* letra azul */
+    background: #f9f9f9;        /* gris muy claro */
+    padding: 4px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background: blue;           /* fondo azul */
+    color: white;               /* letra blanca */
+}
 
 </style>
 
