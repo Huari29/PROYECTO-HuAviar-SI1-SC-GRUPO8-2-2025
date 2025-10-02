@@ -66,7 +66,10 @@ class Usuario extends Authenticatable
     }
     public static function eliminarPorId(int $id): void
     {
-        \DB::statement('CALL eliminar_usuario_por_id(?)', [$id]);
+        DB::statement('CALL eliminar_usuario_por_id(?)', [$id]);
     }
-
+    public static function obtenerUsuario($id)
+    {
+        return DB::selectOne("SELECT * FROM obtener_usuario_por_id(?)", [$id]);
+    }
 }

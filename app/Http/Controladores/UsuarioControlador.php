@@ -22,27 +22,27 @@ class UsuarioControlador extends Controlador
         $usuarios = Usuario::obtenerUsuariosCompleto();
         return view('vendedores.mostrar-usuarios', compact('usuarios'));
     }
-    public function editar($id)
+    public function editarUsuario($id)
     {
-        $usuario = Usuario::findOrFail($id);
-        return view('vendedores.formulario-para-editar-usuario', compact('usuario'));
+        $usuario = Usuario::obtenerUsuario($id);
+        return view('vendedores.editar-usuario', compact('usuario'));
     }
-    public function actualizar(Request $request, $id)
-{
-    $request->validate([
-        'nombre' => 'required|string|max:255',
-        'correo' => 'required|email|unique:usuarios,correo,' . $id,
-    ]);
+    public function actualizarUsuario(Request $request, $id)
+    {
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            'correo' => 'required|email|unique:usuarios,correo,' . $id,
+        ]);
 
-    $usuario = Usuario::findOrFail($id);
-    $usuario->nombre = $request->nombre;
-    $usuario->correo = $request->correo;
-    $usuario->save();
+        $usuario = Usuario::findOrFail($id);
+        $usuario->nombre = $request->nombre;
+        $usuario->correo = $request->correo;
+        $usuario->save();
 
-    return redirect()->route('mostrarDatosDeTodosLosUsuarios')->with('success', 'Usuario actualizado correctamente.');
-}
+        return redirect()->route('mostrarDatosDeTodosLosUsuarios')->with('success', 'Usuario actualizado correctamente.');
+    }
 
-public function eliminar($id)
+public function eliminarUsuario($id)
 {
     $usuario = Usuario::findOrFail($id);
     $usuario->delete();
