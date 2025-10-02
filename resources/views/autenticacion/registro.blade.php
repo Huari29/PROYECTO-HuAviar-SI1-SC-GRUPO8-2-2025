@@ -39,6 +39,13 @@
             <p style="color:red; font-size: 0.9em;">{{ $message }}</p>
         @enderror
     </div>
+    <div class="form-group">
+        <label for="password_confirmation">Confirmar Contraseña</label>
+        <input id="password_confirmation" type="password" name="password_confirmation" required>
+        @error('password_confirmation')
+            <p style="color:red; font-size: 0.9em;">{{ $message }}</p>
+        @enderror
+    </div>
 
     <div class="form-group">
         <label for="direccion">Dirección</label>
