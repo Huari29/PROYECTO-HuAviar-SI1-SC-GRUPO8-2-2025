@@ -60,4 +60,8 @@ class Usuario extends Authenticatable
 
         return $resultado->estado ?? 0;
     }
+    public static function obtenerUsuariosCompleto()
+    {
+        return collect(DB::select('SELECT * FROM obtener_usuarios_completo()'));
+    }
 }
