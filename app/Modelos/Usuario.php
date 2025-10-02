@@ -64,4 +64,9 @@ class Usuario extends Authenticatable
     {
         return collect(DB::select('SELECT * FROM obtener_usuarios_completo()'));
     }
+    public static function eliminarPorId(int $id): void
+    {
+        \DB::statement('CALL eliminar_usuario_por_id(?)', [$id]);
+    }
+
 }

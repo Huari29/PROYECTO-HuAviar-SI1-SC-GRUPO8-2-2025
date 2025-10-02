@@ -39,7 +39,7 @@ class UsuarioControlador extends Controlador
     $usuario->correo = $request->correo;
     $usuario->save();
 
-    return redirect()->route('mostrar.usuarios')->with('success', 'Usuario actualizado correctamente.');
+    return redirect()->route('mostrarDatosDeTodosLosUsuarios')->with('success', 'Usuario actualizado correctamente.');
 }
 
 public function eliminar($id)
@@ -47,6 +47,6 @@ public function eliminar($id)
     $usuario = Usuario::findOrFail($id);
     $usuario->delete();
 
-    return redirect()->route('mostrar.usuarios')->with('success', 'Usuario eliminado correctamente.');
+    return redirect()->route('mostrarDatosDeTodosLosUsuarios')->with('success', 'Usuario eliminado correctamente.');
 }
 }
