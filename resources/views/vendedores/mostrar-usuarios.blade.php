@@ -38,17 +38,19 @@
                             <td>{{ $usuario->direccion }}</td>
                             <td>{{ $usuario->telefono }}</td>
                             <td>
-                                <a href="{{ route('editar.usuario', $usuario->id) }}" class="header-buttons">Editar</a>
-
-                                <form action="{{ route('eliminar.usuario', $usuario->id) }}" method="POST" style="display:inline;">
+                                <div class="div-botones">
+                                    <a href="{{ route('editar.usuario', $usuario->id) }}" class="btn-editar">Editar</a>
+        
+                                    <form action="{{ route('eliminar.usuario', $usuario->id) }}" method="POST" style="display:inline;">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit"
+                                        <button type="submit"
                                             onclick="return confirm('¿Seguro que deseas eliminar este usuario?')"
-                                            class="header-buttons">
-                                        Eliminar
-                                    </button>
-                                </form>
+                                            class="btn-eliminar">
+                                                Eliminar
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     @empty
@@ -62,9 +64,9 @@
     </div>
 
     {{-- Botón para crear usuario --}}
-    <div class="form-group" style="display:flex; gap:10px;">
-        <a href="{{ route('formularioParaCrearNuevoUsuario') }}" class="header-buttons">Crear Usuario</a>
-        <a href="{{ route('bienvenido.usuarios.vendedor') }}" class="btn btn-cerrar">Volver</a>
+    <div class="header-buttons" style="display:flex; gap:10px;">
+        <a href="{{ route('formularioParaCrearNuevoUsuario') }}" >Crear Usuario</a>
+        <a href="{{ route('bienvenido.usuarios.vendedor') }}" >Volver</a>
     </div>
 
 </div>
