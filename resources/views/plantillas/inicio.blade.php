@@ -178,9 +178,9 @@
 
         <nav style="display:flex; justify-content:flex-end; align-items:center; gap:15px;">
             @guest
-                    @yield('botonesSesionCerrada')
-                @else
-                    @yield('botonesSesionAbierta')
+                 @yield('botonesSesionCerrada')
+            @else
+                @yield('botonesSesionAbierta')
             @endguest
         </nav>
 
