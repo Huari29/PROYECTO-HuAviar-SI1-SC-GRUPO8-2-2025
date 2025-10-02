@@ -25,12 +25,12 @@ class AccesoControlador extends Controlador
         ]);
 
         $estado = Usuario::validarCredenciales($request->email, $request->password);
-
+        
         if ($estado === 0) {
             return back()->withErrors(['email' => 'El correo no existe.'])->withInput();
         }
 
-        if ($estado === 1) {
+        if ($estado === 1 ) {
             return back()->withErrors(['password' => 'La contraseña es incorrecta.'])->withInput();
         }
 
@@ -39,6 +39,10 @@ class AccesoControlador extends Controlador
         Auth::login($usuario);
         $request->session()->regenerate();
 
+        $rol = Auth::user()->idrols;   // gracias a la relación belongsTo
+        if($rol === 1){
+           return redirect()->route('bienvenido.usuarios.vendedor'); 
+        }
         return redirect()->intended('/');
 
     }

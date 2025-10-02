@@ -32,7 +32,10 @@
             min-width:150px;
             z-index:1000;">
             <li style="border-bottom:1px solid #eee;">
-                <a href="{{ route('perfil') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">Perfil</a>
+                <a href="{{ route('mostrarDatosPersonales') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">Perfil</a>
+            </li>
+            <li style="border-bottom:1px solid #eee;">
+                <a href="{{ route('mostrarDatosDeTodosLosUsuarios') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">ver usuarios</a>
             </li>
             <li>
                 <form method="POST" action="{{ route('cerrarSesion') }}">

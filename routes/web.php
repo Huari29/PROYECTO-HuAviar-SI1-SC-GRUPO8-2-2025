@@ -6,6 +6,7 @@ use App\Http\Controladores\Autenticacion\RegistroControlador;
 use App\Http\Controladores\Autenticacion\OlvideMiContraseniaControlador;
 use App\Http\Controladores\Autenticacion\RestablecerContraseniaControlador;
 use App\Http\Controladores\Autenticacion\PerfilControlador;
+use App\Http\Controladores\UsuarioControlador;
 
 Route::get('/', function () {
     return view('bienvenido');
@@ -38,3 +39,15 @@ Route::post('/reset-password', [RestablecerContraseniaControlador::class, 'guard
     ->name('actualizar.contrasenia');
 
 Route::get('/perfil', [PerfilControlador::class, 'verDatos'])->name('perfil')->middleware('auth');
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/bienvenido', [UsuarioControlador::class, 'bienvenido'])->name('bienvenido.usuarios.vendedor');
+    Route::get('/datos-personales', [UsuarioControlador::class, 'mostrarDatosPersonales'])->name('mostrarDatosPersonales');
+    Route::get('/lista-de-usuarios', [UsuarioControlador::class, 'mostrarDatosDeTodosLosUsuarios'])->name('mostrarDatosDeTodosLosUsuarios');
+    Route::post('/usuarios', [UsuarioControlador::class, 'guardar'])->name('guardar.usuarios');
+    Route::get('/usuarios/{id}/editar', [UsuarioControlador::class, 'editar'])->name('editar.usuario');
+    Route::put('/usuarios/{id}', [UsuarioControlador::class, 'actualizar'])->name('actualizar.usuario');
+    Route::delete('/usuarios/{id}', [UsuarioControlador::class, 'eliminar'])->name('eliminar.usuario');
+});

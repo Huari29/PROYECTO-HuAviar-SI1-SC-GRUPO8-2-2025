@@ -12,14 +12,14 @@
     </title>
     <link rel="icon" type="image/png" href="{{ asset('imagenes/logo2.png')}}" sizes="32x32">
     <style>
-    body {
+        body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background: #f7f7f7;
         color: #333;
-    }
-    header {
+        }
+        header {
         background: #ef8504;
         color: white;
         padding: 20px 20px;
@@ -27,17 +27,17 @@
         display: flex;
         justify-content: space-between; /* título a la izquierda, botones a la derecha */
         align-items: center;
-    }
-    header h1 {
+        }
+        header h1 {
         margin: 0;
         font-size: 2em;
-    }
-    .header-buttons {
+        }
+        .header-buttons {
         display: flex;
         gap: 15px;
-    }
-    .header-buttons a,
-    .header-buttons button {
+        }
+        .header-buttons a,
+        .header-buttons button {
         color: #ef8504;
         background: white;
         padding: 8px 15px;
@@ -47,59 +47,59 @@
         transition: background 0.3s, color 0.3s;
         border: none;
         cursor: pointer;
-    }
-    .header-buttons a:hover,
-    .header-buttons button:hover {
+        }
+        .header-buttons a:hover,
+        .header-buttons button:hover {
         background: #a75407;
         color: white;
-    }
+        }
 
-    .container {
+        .container {
         width: 90%;
         max-width: 1200px;
         margin: 30px auto;
-    }
-    .category {
+        }
+        .category {
         margin-bottom: 50px;
-    }
-    .category h2 {
+        }
+        .category h2 {
         border-bottom: 2px solid #ef8504;
         padding-bottom: 10px;
         color: #ef8504;
-    }
-    .bird-grid {
+        }
+        .bird-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
         margin-top: 20px;
-    }
-    .bird-card {
+        }
+        .bird-card {
         background: white;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         transition: transform 0.3s;
-    }
-    .bird-card:hover {
+        }
+        .bird-card:hover {
         transform: scale(1.05);
-    }
-    .bird-card img {
+        }
+        .bird-card img {
         width: 100%;
         height: 150px;
         object-fit: cover;
-    }
-    .bird-card .info {
+        }
+        .bird-card .info {
         padding: 15px;
-    }
-    .bird-card .info h3 {
+        }
+        .bird-card .info h3 {
         margin: 0 0 10px 0;
         font-size: 1.2em;
-    }
-    .bird-card .info p {
+        }
+        .bird-card .info p {
         margin: 0;
         font-size: 0.95em;
         color: #666;
-    }
+        }
 
     /* Formularios */
     .form-box {
@@ -167,6 +167,88 @@
         padding: 20px 0;
         margin-top: 50px;
     }
+    /* Tabla estilizada */
+    .styled-table {
+    border-collapse: collapse;
+    font-size: 0.95em;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .styled-table thead tr {
+    background-color: #ef8504;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    }
+
+    .styled-table th,
+    .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:hover {
+        background-color: #ffe6c2;
+        transition: background 0.3s;
+    }
+
+    .styled-table tbody tr td .header-buttons {
+        padding: 5px 10px;
+        font-size: 0.85em;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+    .styled-table thead {
+        display: none;
+    }
+    .styled-table, .styled-table tbody, .styled-table tr, .styled-table td {
+        display: block;
+        width: 100%;
+    }
+    .styled-table tr {
+        margin-bottom: 15px;
+    }
+    .styled-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .styled-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+    } /* ← aquí cerramos el media query */
+    .header-buttons .btn-cerrar {
+    background: white;
+    color: #ef8504;
+    border: 1px solid #ef8504;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    }
+
+    .header-buttons .btn-cerrar:hover {
+    background: #ff4c4c; /* rojo suave */
+    color: white;
+    }
+
+
 </style>
 
 </head>
@@ -186,7 +268,7 @@
 
     </header>
 
-    @yield('content')
+    @yield('contenido')
 </body>
 <footer>
         <p>© {{ date('Y') }} Tu Empresa | Contacto: info@tudominio.com</p>
