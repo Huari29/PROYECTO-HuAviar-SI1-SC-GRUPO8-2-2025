@@ -40,6 +40,9 @@
             <li style="border-bottom:1px solid #eee;">
                 <a href="{{ route('categorias.index') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">Categorías</a>
             </li>
+            <li style="border-bottom:1px solid #eee;">
+                <a href="{{ route('rols.index') }}" style="display:block; padding:10px; text-decoration:none; color:#333;">roles</a>
+            </li>
             <li>
                 <form method="POST" action="{{ route('cerrarSesion') }}">
                 @csrf

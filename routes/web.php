@@ -8,6 +8,7 @@ use App\Http\Controladores\Autenticacion\RestablecerContraseniaControlador;
 use App\Http\Controladores\Autenticacion\PerfilControlador;
 use App\Http\Controladores\UsuarioControlador;
 use App\Http\Controladores\CategoriaControlador;
+use App\Http\Controladores\RolControlador;
 
 Route::get('/', function () {
     return view('bienvenido');
@@ -59,3 +60,6 @@ Route::middleware('auth')->group(function () {
 
 
 Route::resource('categorias', CategoriaControlador::class)->middleware('auth');
+
+Route::resource('rols', RolControlador::class)->middleware('auth');
+
