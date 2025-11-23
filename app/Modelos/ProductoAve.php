@@ -25,9 +25,7 @@ class ProductoAve extends Model
         return $this->hasMany(Usuario::class, 'idrols');
     }
 
-<<<<<<< Updated upstream
-}
-=======
+
     // 🔗 Relación con DetalleAve (1 producto pertenece a 1 detalle)
     public function detalleAve()
     {
@@ -64,4 +62,4 @@ class ProductoAve extends Model
         return $this->hasMany(Stock::class, 'idproductoaves');
     }
 }
->>>>>>> Stashed changes
+
