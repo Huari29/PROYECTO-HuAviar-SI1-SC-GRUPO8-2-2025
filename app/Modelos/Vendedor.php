@@ -24,4 +24,23 @@ class Vendedor extends Model
     {
         return $this->hasMany(Usuario::class, 'idvendedors');
     }
+<<<<<<< Updated upstream
+=======
+
+    /**
+     * Relación: Un vendedor puede tener muchos pedidos
+     */
+    public function pedidos(): HasMany
+    {
+        return $this->hasMany(Pedido::class, 'idvendedors');
+    }
+
+    /**
+     * Relación: Un vendedor puede tener muchas compras
+     */
+    public function compras(): HasMany
+    {
+        return $this->hasMany(Compra::class, 'idvendedors');
+    }
+>>>>>>> Stashed changes
 }

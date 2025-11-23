@@ -53,6 +53,13 @@ class Usuario extends Authenticatable
         return $this->belongsTo(Rol::class, 'idrols');
     }
 
+     /**
+     * Relación: Un usuario puede tener muchas cajas
+     */
+    public function cajas(): HasMany
+    {
+        return $this->hasMany(Caja::class, 'idusuarios');
+    }
     /**
      * 👈 Hack para decirle a Laravel que el campo password es 'contrasenia'
      */
@@ -97,5 +104,7 @@ class Usuario extends Authenticatable
         [$id, $nombre, $email, $idrols, $direccion, $telefono]
     );
 }
+
+
 
 }
