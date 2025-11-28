@@ -1,0 +1,155 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#6233
+    [34mall[39m: [
+      [34;4mApp\Modelos\Usuario[39;24m {#6642
+        [34mid[39m: [35m2[39m,
+        [34mnombre[39m: "[32mAna López[39m",
+        [34memail[39m: "[32mana.lopez@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6641
+        [34mid[39m: [35m3[39m,
+        [34mnombre[39m: "[32mCarlos Ramos[39m",
+        [34memail[39m: "[32mcarlos.ramos@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6640
+        [34mid[39m: [35m4[39m,
+        [34mnombre[39m: "[32mMaría Suárez[39m",
+        [34memail[39m: "[32mmaria.suarez@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6639
+        [34mid[39m: [35m5[39m,
+        [34mnombre[39m: "[32mPedro Ortiz[39m",
+        [34memail[39m: "[32mpedro.ortiz@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6638
+        [34mid[39m: [35m6[39m,
+        [34mnombre[39m: "[32mLucía García[39m",
+        [34memail[39m: "[32mlucia.garcia@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6637
+        [34mid[39m: [35m7[39m,
+        [34mnombre[39m: "[32mRoberto Díaz[39m",
+        [34memail[39m: "[32mroberto.diaz@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6636
+        [34mid[39m: [35m8[39m,
+        [34mnombre[39m: "[32mSofía Vargas[39m",
+        [34memail[39m: "[32msofia.vargas@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6635
+        [34mid[39m: [35m9[39m,
+        [34mnombre[39m: "[32mDaniel Guzmán[39m",
+        [34memail[39m: "[32mdaniel.guzman@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6634
+        [34mid[39m: [35m10[39m,
+        [34mnombre[39m: "[32mLaura Torres[39m",
+        [34memail[39m: "[32mlaura.torres@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6633
+        [34mid[39m: [35m15[39m,
+        [34mnombre[39m: "[32mAsher Bustillos[39m",
+        [34memail[39m: "[32masher.bustillos@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6632
+        [34mid[39m: [35m17[39m,
+        [34mnombre[39m: "[32mLuis Huari Choque[39m",
+        [34memail[39m: "[32mluis.huari29@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6631
+        [34mid[39m: [35m18[39m,
+        [34mnombre[39m: "[32mSantiago Huari Choque[39m",
+        [34memail[39m: "[32msantiago.huari29@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6630
+        [34mid[39m: [35m16[39m,
+        [34mnombre[39m: "[32mCristian Huari[39m",
+        [34memail[39m: "[32mcristoteam29@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6629
+        [34mid[39m: [35m21[39m,
+        [34mnombre[39m: "[32mRoy Barrero[39m",
+        [34memail[39m: "[32mroy.barrero@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6628
+        [34mid[39m: [35m20[39m,
+        [34mnombre[39m: "[32mDaniela Belen Ancalle Sejas[39m",
+        [34memail[39m: "[32mdaniela.belen@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6627
+        [34mid[39m: [35m19[39m,
+        [34mnombre[39m: "[32mYenny Jallasa Mamani[39m",
+        [34memail[39m: "[32myenny.jallasa@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6626
+        [34mid[39m: [35m37[39m,
+        [34mnombre[39m: "[32mPepe Gonzales[39m",
+        [34memail[39m: "[32mpepe@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6625
+        [34mid[39m: [35m22[39m,
+        [34mnombre[39m: "[32mMelissa Sanchez[39m",
+        [34memail[39m: "[32mmely@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6624
+        [34mid[39m: [35m23[39m,
+        [34mnombre[39m: "[32mToribia Gallego[39m",
+        [34memail[39m: "[32mtoribia@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6623
+        [34mid[39m: [35m24[39m,
+        [34mnombre[39m: "[32msaturnino mamani[39m",
+        [34memail[39m: "[32msaturno@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6622
+        [34mid[39m: [35m38[39m,
+        [34mnombre[39m: "[32mPepe1 Gonzales[39m",
+        [34memail[39m: "[32mpep1e@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6621
+        [34mid[39m: [35m39[39m,
+        [34mnombre[39m: "[32mPepe12 Gonzales[39m",
+        [34memail[39m: "[32mpepe12@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6620
+        [34mid[39m: [35m1[39m,
+        [34mnombre[39m: "[32mLimberg Huari[39m",
+        [34memail[39m: "[32mlimberg.huari@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6619
+        [34mid[39m: [35m26[39m,
+        [34mnombre[39m: "[32mSamuel Torrico[39m",
+        [34memail[39m: "[32msamuel@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6618
+        [34mid[39m: [35m25[39m,
+        [34mnombre[39m: "[32mBelisario Landa[39m",
+        [34memail[39m: "[32mbeli.landa@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6617
+        [34mid[39m: [35m30[39m,
+        [34mnombre[39m: "[32mJose Aguirre[39m",
+        [34memail[39m: "[32mjose@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6616
+        [34mid[39m: [35m33[39m,
+        [34mnombre[39m: "[32mSantiago Justo Huari[39m",
+        [34memail[39m: "[32msantiagojusto@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6615
+        [34mid[39m: [35m31[39m,
+        [34mnombre[39m: "[32mMelquiades Ancalle[39m",
+        [34memail[39m: "[32mmelquiades@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6614
+        [34mid[39m: [35m35[39m,
+        [34mnombre[39m: "[32mLuis Morales[39m",
+        [34memail[39m: "[32mluismorales@gmail.com[39m",
+      },
+      [34;4mApp\Modelos\Usuario[39;24m {#6613
+        [34mid[39m: [35m36[39m,
+        [34mnombre[39m: "[32mLimberg Huari Choque[39m",
+        [34memail[39m: "[32mlimberg6@gmail.com[39m",
+      },
+    ],
+  }
+
